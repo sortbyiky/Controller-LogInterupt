@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.7.17</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+    <groupId>com.scholar</groupId>
+    <artifactId>springboot-reqlogpro-star</artifactId>
+    <version>1.0</version>
+    <name>springboot-reqlogpro-star</name>
+    <description>springboot-reqlogpro-star</description>
+    <url/>
+    <licenses>
+        <license/>
+    </licenses>
+    <developers>
+        <developer/>
+    </developers>
+    <scm>
+        <connection/>
+        <developerConnection/>
+        <tag/>
+        <url/>
+    </scm>
+    <properties>
+        <java.version>1.8</java.version>
+    </properties>
+    <dependencies>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <!--表示两个项目之间依赖不传递；不设置optional或者optional是false，表示传递依赖-->
+        <!--例如：project1依赖a.jar(optional=true),project2依赖project1,则project2不依赖a.jar-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+            <optional>true</optional>
+        </dependency>
+
+        <!-- Spring Boot Starter AOP: 提供 AOP 功能支持 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-aop</artifactId>
+        </dependency>
+
+        <!-- 在 Spring Boot 项目中，Jackson 是默认集成的 -->
+        <!-- Jackson Databind: 用于将对象序列化为 JSON 字符串 -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+        </dependency>
+
+        <!-- Lombok: 简化代码编写（如 @Getter, @Setter, @AllArgsConstructor 等） -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.32</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+    <distributionManagement>
+        <repository>
+            <!-- id要和setting.xml中的保持一致 -->
+            <id>nexus-scholar</id>
+            <url>https://nexus.wym123.cn/repository/maven-releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>nexus-scholar</id>
+            <url>https://nexus.wym123.cn/repository/maven-snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
+
+
+</project>

@@ -1,0 +1,34 @@
+{
+  "properties": [
+    {
+      "name": "controller.log.enabled",
+      "type": "java.lang.Boolean",
+      "description": "是否启用日志功能",
+      "defaultValue": true
+    },
+    {
+      "name": "controller.log.level",
+      "type": "com.scholar.springbootreqlogprostar.enums.RequestLogLevelEnum",
+      "description": "日志记录的级别",
+      "defaultValue": "BODY",
+      "values": [
+        {
+          "value": "NONE",
+          "description": "不记录日志"
+        },
+        {
+          "value": "BASIC",
+          "description": "仅记录请求方法和响应状态"
+        },
+        {
+          "value": "HEADERS",
+          "description": "记录请求方法、响应状态和请求头信息"
+        },
+        {
+          "value": "BODY",
+          "description": "记录完整的请求和响应，包括请求体"
+        }
+      ]
+    }
+  ]
+}
