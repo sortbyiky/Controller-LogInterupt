@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.scholar</groupId>
-    <artifactId>springboot-reqlogpro-star</artifactId>
+    <artifactId>CtrlLogger</artifactId>
     <version>1.0</version>
-    <name>springboot-reqlogpro-star</name>
+    <name>CtrlLogger</name>
     <description>springboot-reqlogpro-star</description>
     <url/>
     <licenses>

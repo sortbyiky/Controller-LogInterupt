@@ -12,4 +12,6 @@ public class RequestLogProperties {
 
     private RequestLogLevelEnum level = RequestLogLevelEnum.BODY; // 默认日志级别为 BODY
     private boolean enabled = true; // 控制日志功能是否启用
+    private boolean filterEnabled = false; // 控制过滤器是否启用，默认为关闭
+
 }
